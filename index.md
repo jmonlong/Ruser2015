@@ -1,6 +1,6 @@
 ---
-title       : R user meeting March 2015
-subtitle    : Emacs + ESS + AutoComplete
+title       : Emacs + ESS + AutoComplete
+subtitle    : R-user meeting March 2015
 author      : Jean Monlong
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -17,9 +17,7 @@ knit        : slidify::knit2slides
 
 + First written in 1976 by Richard Stallman.
 + First software of the GNU project.
-+ Before
-  + mice
-  + Windows or Macintosh computers
++ Before mice and Windows/Macintosh computers.
 
 ### Emacs Speaks Statistics
 
@@ -36,7 +34,8 @@ knit        : slidify::knit2slides
 
 + Multiplatform powerful text editor.
 + Free and Open Source.
-+ Extensive set of modes for different programmation languages and types of files (e.g. R, Perl, Latex, Markdown)).
++ Modes for different programmation languages and file types
+  + Example R, Perl, Latex, Markdown.
   + Indentation, text highlight, functions.
 + Customizable.
 + Keyboard control or GUI.
