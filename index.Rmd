@@ -177,12 +177,12 @@ I don't know enough so no comment.
 
 ## Conclusions
 
-#### Emacs is powerful.
+Emacs is powerful.
 
-#### Emacs is configurable. Extensions too.
+Emacs is configurable. Extensions too.
 
-#### It has extensive features for R development.
+It has extensive features for R development.
 
-#### More than R. Just one editor to know.
+More than R. Just one editor to know.
 
 
