@@ -35,7 +35,7 @@ knit        : slidify::knit2slides
 + Multiplatform powerful text editor.
 + Free and Open Source.
 + Modes for different programmation languages and file types
-  + Example R, Perl, Latex, Markdown.
+  + e.g. R, Perl, Latex, Markdown.
   + Indentation, text highlight, functions.
 + Customizable.
 + Keyboard control or GUI.
@@ -62,7 +62,7 @@ One principal file to customize Emacs: `.emacs`.
 
 ---
 
-## Emacs general shortcuts
+## Emacs shortcuts
 
 `M-/` and `C-M-/` autocomplete from the words present in open buffers.
 
@@ -94,4 +94,13 @@ Get help on a function with `C-c C-v`.
 
 Commands
 
+---
+
+## TODO
+
++ Eval commands
++ AC config
++ AC rules
++ Put .emacs in github
++ Put example R file in github
 
