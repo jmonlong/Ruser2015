@@ -34,7 +34,7 @@
   <hgroup class="auto-fadein">
     <h1>Emacs + ESS + AutoComplete</h1>
     <h2>R-user meeting March 2015</h2>
-    <p>Jean Monlong<br/></p>
+    <p>Jean Monlong<br/>PhD Candidate McGill University</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -51,7 +51,7 @@
 <ul>
 <li>First written in 1976 by Richard Stallman.</li>
 <li>First software of the GNU project.</li>
-<li>Before mice and Windows/Macintosh computers.</li>
+<li>Before mice, Windows or Macintosh computers.</li>
 </ul>
 
 <h3>Emacs Speaks Statistics</h3>
@@ -82,7 +82,7 @@
 <li>Modes for different programmation languages and file types
 
 <ul>
-<li>e.g. R, Perl, Latex, Markdown.</li>
+<li>e.g. R, Latex, Markdown, Perl.</li>
 <li>Indentation, text highlight, functions.</li>
 </ul></li>
 <li>Customizable.</li>
@@ -95,20 +95,22 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Init file</h2>
+    <h3>Installation</h3>
   </hgroup>
   <article data-timings="">
-    <p>One principal file to customize Emacs: <code>.emacs</code>.</p>
+    <ul>
+<li>Linux : <code>apt-get install emacs24</code></li>
+<li>OSX/Windows : package from <a href="http://vgoulet.act.ulaval.ca/en/emacs">Vincent Goulet</a></li>
+</ul>
 
-<pre><code class="elisp">;; disable startup screen
+<h3>Configuration file</h3>
+
+<p>One file to customize Emacs: <code>~/.emacs</code>.</p>
+
+<pre><code class="elisp">;; Disable startup screen
 (setq inhibit-splash-screen t)
-
-;; turn the blinking off
-(blink-cursor-mode 0)
-
-;;; turn off the tool-bar (&lt;=0 off, &gt;0 on)
-(tool-bar-mode 0)
-
+;; Load path definition
+(add-to-list &#39;load-path &quot;~/.emacs.d/lisp/&quot;)
 ;; Font
 (set-default-font &quot;Consolas 14&quot;)
 </code></pre>
@@ -119,14 +121,20 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Emacs shortcuts</h2>
+    <h2>My favorite Emacs features</h2>
   </hgroup>
   <article data-timings="">
-    <p><code>M-/</code> and <code>C-M-/</code> autocomplete from the words present in open buffers.</p>
+    <p>Autocomplete from words in buffers : <code>M-/</code></p>
 
-<p><code>C-s</code>, <code>C-r</code> for forward/reverse search and <code>M-%</code> to replace.</p>
+<p>Forward/reverse search : <code>C-s</code>, <code>C-r</code></p>
 
-<p><code>C-x 1</code>, <code>C-x 2</code>, <code>C-x 3</code> to split/merge buffers. <code>C-x b</code> and <code>C-x o</code> to switch/change buffers.</p>
+<p>Replace : <code>M-%</code></p>
+
+<p>Split/merge buffers : <code>C-x 1</code>, <code>C-x 2</code>, <code>C-x 3</code></p>
+
+<p>Switch/change buffers : <code>C-x b</code> and <code>C-x o</code></p>
+
+<p>Undo : <code>C-_</code></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -134,22 +142,23 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>ESS</h2>
+    <h2>ESS and other packages</h2>
   </hgroup>
   <article data-timings="">
-    <p>Using imenu functionality, jump to function definition using <code>M-o</code>.</p>
+    <h3>ESS installation</h3>
 
-<p>Get information about an object with <code>C-c C-d C-e</code> and additional <code>C-e</code> to get extra information.</p>
+<ul>
+<li>Linux : <code>apt-get install ess</code></li>
+<li>OSX/Windows : included in Vincent Goulet package.</li>
+</ul>
 
-<p>Smart underscores.</p>
+<h3>Adding simple packages</h3>
 
-<p>Comment/uncomment a region with <code>M-;</code>.</p>
-
-<p>Get help on a function with <code>C-c C-v</code>.</p>
-
-<h3>Eval code</h3>
-
-<p><code>C-c C-f</code> to eval a function.</p>
+<ol>
+<li>Download a <code>.el</code> file.</li>
+<li>Put <code>.el</code> file in load path (e.g. <code>~/.emacs.d</code>)</li>
+<li>Add <code>(require &#39;the-el-file.el)</code> to <code>~/.emacs</code> file.</li>
+</ol>
 
   </article>
   <!-- Presenter Notes -->
@@ -157,10 +166,24 @@
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>Autocomplete</h2>
+    <h3>Eval code</h3>
   </hgroup>
   <article data-timings="">
-    <p>Commands</p>
+    <p><code>C-c C-n</code> to eval a line.</p>
+
+<p><code>C-c C-p</code> to eval a paragraph.</p>
+
+<p><code>C-c C-r</code> to eval a region.</p>
+
+<p><code>C-c C-f</code> to eval a function.</p>
+
+<h3>Other features</h3>
+
+<p><code>C-c C-d C-e</code> to get information about R object (additional <code>C-e</code> for extra information)</p>
+
+<p><code>C-c C-v</code> to open a function&#39;s manual. </p>
+
+<p><code>M-;</code> to comment/uncomment a region.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -168,16 +191,107 @@
 
 <slide class="" id="slide-7" style="background:;">
   <hgroup>
-    <h2>TODO</h2>
+    <h3>Imenu</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>imenu</strong> <a href="https://github.com/vspinu/imenu-anywhere"><code>imenu-anywhere.el</code></a></p>
+
+<p>Jump to function definition : <code>M-o</code></p>
+
+<h3>Smart underscores</h3>
+
+<p><a href="http://www.emacswiki.org/emacs/ess-smart-underscore.el"><code>ess-smart-underscore.el</code></a></p>
+
+<p>When pressing <code>_</code>, insert <code>_</code> or <code>&lt;-</code> depending on context.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Autocomplete</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Installation</h3>
+
+<ol>
+<li>Download and uncompress <a href="https://github.com/auto-complete/auto-complete"><code>auto-complete-1.5.0.tar.gz</code></a>.</li>
+<li>In Emacs do: <code>M-x load-file RET</code>.</li>
+<li>Enter path to install file : <code>auto-complete-1.5.0/etc/install.el</code>.</li>
+<li>Update <code>.emacs</code> with</li>
+</ol>
+
+<pre><code class="elisp">(require &#39;auto-complete-config)
+(ac-config-default)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Autocomplete dictionnaries</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Eval commands</li>
-<li>AC config</li>
-<li>AC rules</li>
-<li>Put .emacs in github</li>
-<li>Put example R file in github</li>
+<li>Words in the buffer</li>
+<li>Object defined in R.</li>
+<li>Functions in R.</li>
+<li>Arguments of the functions.</li>
+<li>File paths.</li>
 </ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Configuration</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="elisp">(setq ac-auto-start nil)
+(define-key ac-mode-map (kbd &quot;M-TAB&quot;) &#39;auto-complete)
+(define-key ac-completing-map [return] nil)
+(setq ac-quick-help-delay 0.1)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Other softwares</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Rstudio</h3>
+
+<p>Complete IDE for R development.
+It has most of ESS and AutoComplete features/</p>
+
+<h3>Vim</h3>
+
+<p>I don&#39;t know enough so no comment.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Conclusions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Emacs is powerful.</p>
+
+<p>Emacs is configurable.</p>
+
+<p>It has extensive features for R development.</p>
+
+<p>But not only R.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -201,32 +315,62 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Init file'>
+        data-slide=3 title='Installation'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Emacs shortcuts'>
+        data-slide=4 title='My favorite Emacs features'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='ESS'>
+        data-slide=5 title='ESS and other packages'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Autocomplete'>
+        data-slide=6 title='Eval code'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='TODO'>
+        data-slide=7 title='Imenu'>
          7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Autocomplete'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Autocomplete dictionnaries'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Configuration'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Other softwares'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Conclusions'>
+         12
       </a>
     </li>
   </ul>
