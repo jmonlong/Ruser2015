@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R user meeting March 2015</title>
+  <meta charset="utf-8">
+  <meta name="description" content="R user meeting March 2015">
+  <meta name="author" content="Jean Monlong">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>R user meeting March 2015</h1>
+    <h2>Emacs + ESS + AutoComplete</h2>
+    <p>Jean Monlong<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Brief history</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>First written in 1976 by Richard Stallman.</li>
+<li>First software of the GNU project.</li>
+<li>Before
+
+<ul>
+<li>mice</li>
+<li>Windows or Macintosh computers</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Why Emacs ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Multiplatform powerful text editor.</li>
+<li>Free and Open Source.</li>
+<li>Extensive set of modes for different programmation languages and types of files (e.g. R, Perl, Latex, Markdown)).
+
+<ul>
+<li>Indentation, text highlight, functions.</li>
+</ul></li>
+<li>Customizable.</li>
+<li>Keyboard control or GUI.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Init file</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>One principal file to customize Emacs: <code>.emacs</code>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Emacs general shortcuts</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>M-/</code> and <code>C-M-/</code> autocomplete from the words present in open buffers.</p>
+
+<p><code>C-s</code>, <code>C-r</code> for forward/reverse search and <code>M-%</code> to replace.</p>
+
+<p><code>C-x 1</code>, <code>C-x 2</code>, <code>C-x 3</code> to split/merge buffers. <code>C-x b</code> and <code>C-x o</code> to switch/change buffers.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>ESS</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using imenu functionality, jump to function definition using <code>M-o</code>.</p>
+
+<p>Get information about an object with <code>C-c C-d C-e</code> and additional <code>C-e</code> to get extra information.</p>
+
+<p>Smart underscores.</p>
+
+<p>Comment/uncomment a region with <code>M-;</code>.</p>
+
+<p>Get help on a function with <code>C-c C-v</code>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h3>Eval code</h3>
+  </hgroup>
+  <article data-timings="">
+    <p><code>C-c C-f</code> to eval a function.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Autocomplete</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Brief history'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Why Emacs ?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Init file'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Emacs general shortcuts'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='ESS'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Eval code'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Autocomplete'>
+         7
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
