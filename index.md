@@ -24,7 +24,7 @@ knit        : slidify::knit2slides
 + Late 90s
 + Merge of S-mode, SAS-mode and Strata-mode
 
-### Autocomplete
+### AutoComplete
 
 + First release around 2009.
 
@@ -177,12 +177,12 @@ I don't know enough so no comment.
 
 ## Conclusions
 
-Emacs is powerful.
+#### Emacs is powerful.
 
-Emacs is configurable.
+#### Emacs is configurable. Extensions too.
 
-It has extensive features for R development.
+#### It has extensive features for R development.
 
-But not only R.
+#### More than R. Just one editor to know.
 
 
