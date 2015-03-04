@@ -43,10 +43,12 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Brief history</h2>
+    <h2>Brief history of Emacs, ESS and AutoComplete</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
+    <h3>Emacs</h3>
+
+<ul>
 <li>First written in 1976 by Richard Stallman.</li>
 <li>First software of the GNU project.</li>
 <li>Before
@@ -55,6 +57,19 @@
 <li>mice</li>
 <li>Windows or Macintosh computers</li>
 </ul></li>
+</ul>
+
+<h3>Emacs Speaks Statistics</h3>
+
+<ul>
+<li>Late 90s</li>
+<li>Merge of S-mode, SAS-mode and Strata-mode</li>
+</ul>
+
+<h3>Autocomplete</h3>
+
+<ul>
+<li>First release around 2009.</li>
 </ul>
 
   </article>
@@ -88,6 +103,19 @@
   </hgroup>
   <article data-timings="">
     <p>One principal file to customize Emacs: <code>.emacs</code>.</p>
+
+<pre><code class="elisp">;; disable startup screen
+(setq inhibit-splash-screen t)
+
+;; turn the blinking off
+(blink-cursor-mode 0)
+
+;;; turn off the tool-bar (&lt;=0 off, &gt;0 on)
+(tool-bar-mode 0)
+
+;; Font
+(set-default-font &quot;Consolas 14&quot;)
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -123,22 +151,15 @@
 
 <p>Get help on a function with <code>C-c C-v</code>.</p>
 
+<h3>Eval code</h3>
+
+<p><code>C-c C-f</code> to eval a function.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h3>Eval code</h3>
-  </hgroup>
-  <article data-timings="">
-    <p><code>C-c C-f</code> to eval a function.</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-7" style="background:;">
   <hgroup>
     <h2>Autocomplete</h2>
   </hgroup>
@@ -155,7 +176,7 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Brief history'>
+        data-slide=1 title='Brief history of Emacs, ESS and AutoComplete'>
          1
       </a>
     </li>
@@ -185,14 +206,8 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Eval code'>
+        data-slide=6 title='Autocomplete'>
          6
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Autocomplete'>
-         7
       </a>
     </li>
   </ul>

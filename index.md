@@ -11,13 +11,24 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Brief history
+## Brief history of Emacs, ESS and AutoComplete
+
+### Emacs
 
 + First written in 1976 by Richard Stallman.
 + First software of the GNU project.
 + Before
   + mice
   + Windows or Macintosh computers
+
+### Emacs Speaks Statistics
+
++ Late 90s
++ Merge of S-mode, SAS-mode and Strata-mode
+
+### Autocomplete
+
++ First release around 2009.
 
 ---
 
@@ -35,6 +46,20 @@ knit        : slidify::knit2slides
 ## Init file
 
 One principal file to customize Emacs: `.emacs`.
+
+```{elisp}
+;; disable startup screen
+(setq inhibit-splash-screen t)
+
+;; turn the blinking off
+(blink-cursor-mode 0)
+
+;;; turn off the tool-bar (<=0 off, >0 on)
+(tool-bar-mode 0)
+
+;; Font
+(set-default-font "Consolas 14")
+```
 
 ---
 
@@ -59,8 +84,6 @@ Smart underscores.
 Comment/uncomment a region with `M-;`.
 
 Get help on a function with `C-c C-v`.
-
----
 
 ### Eval code
 
