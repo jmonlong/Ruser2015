@@ -70,6 +70,6 @@ Get help on a function with `C-c C-v`.
 
 ## Autocomplete
 
-
+Commands
 
 
