@@ -9,7 +9,7 @@
 (package-initialize) ;; You might already have this line
 
 ;; Solarized
-(load-theme 'sanityinc-solarized-dark t) 
+;;(load-theme 'sanityinc-solarized-dark t) 
 
 ;; Edit compressed files
 (auto-compression-mode t)
@@ -25,14 +25,11 @@
 ;;; turn off the menu bar (<=0 off, >0 on)
 ;;(menu-bar-mode 0)
 
-(set-default-font "Consolas 14")
-
 ;; ESS
 (add-to-list 'load-path "~/.emacs.d/lisp/ess/ess-14.09/lisp/")
 (load "ess-site")
 (setq ess-describe-at-point-method 'tooltip)
 (setq ess-ask-for-ess-directory nil)
-
 ;; set indentation size
 (setq ess-default-style 'DEFAULT)
 (setq ess-indent-level 2)
@@ -48,22 +45,12 @@
 (ac-config-default)
 (setq ac-auto-start nil)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-(define-key ac-completing-map [return] nil)
+(define-key ac-completing-map "\t" 'ac-complete)
+(define-key ac-completing-map "\r" nil)
 (setq ac-quick-help-delay 0.1)
 ;; Eldoc : Show function information when cursor on function
 (setq ess-eldoc-show-on-symbol t)
 
-
-
-;; Mac key bindings
-;(define-key function-key-map (kbd "M-<down>") 'forward-paragraph)
-;(define-key function-key-map (kbd "M-<up>") 'backward-paragraph)
-
-;;; OSX : Window size
-(require 'maxframe)
-(add-hook 'window-setup-hook 'maximize-frame t)
-;;; Window focus
-(x-focus-frame nil)
 
 ;; Modes and file extensions
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
@@ -80,3 +67,16 @@
        (define-key flyspell-mouse-map [mouse-3] #'undefined)))
 ;; Autoturn on for latex documents
 (add-hook 'latex-mode-hook 'flyspell-mode)
+
+;; OSX : Font
+(set-default-font "Consolas 14")
+
+;; OSX : Mac key bindings
+(define-key function-key-map (kbd "M-<down>") 'forward-paragraph)
+(define-key function-key-map (kbd "M-<up>") 'backward-paragraph)
+
+;;; OSX : Window size
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+;;; OSX : Window focus
+(x-focus-frame nil)
