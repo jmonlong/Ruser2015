@@ -35,3 +35,4 @@ plotEx <- function(nb){
 }
 
 plotEx(nb = 100)
+
